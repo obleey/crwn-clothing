@@ -20,6 +20,8 @@ const Header = () => {
   const currentUser = useSelector(selectCurrentUser);
   const hidden = useSelector(selectCartHidden);
   const dispatch = useDispatch();
+  const signOutStartHandler = () => dispatch(signOutStart());
+
   return (
     <HeaderContainer>
       <LogoContainer to='/'>
@@ -29,7 +31,7 @@ const Header = () => {
         <OptionLink to='/shop'>SHOP</OptionLink>
         <OptionLink to='/shop'>CONTACT</OptionLink>
         {currentUser ? (
-          <OptionLink as='div' onClick={() => dispatch(signOutStart())}>
+          <OptionLink as='div' onClick={signOutStartHandler}>
             SIGN OUT
           </OptionLink>
         ) : (

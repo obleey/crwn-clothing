@@ -13,10 +13,10 @@ import {
 const CartIcon = () => {
   const itemCount = useSelector(selectCartItemsCount);
   const dispatch = useDispatch();
-  const itemCountHandler = () => dispatch(toggleCartHidden());
+  const toggleCartHiddenHandler = () => dispatch(toggleCartHidden());
 
   return (
-    <CartContainer onClick={itemCountHandler}>
+    <CartContainer onClick={toggleCartHiddenHandler}>
       <ShoppingIcon />
       <ItemCountContainer>{itemCount}</ItemCountContainer>
     </CartContainer>

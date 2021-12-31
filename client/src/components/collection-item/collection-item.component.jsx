@@ -15,7 +15,7 @@ import {
 const CollectionItem = ({ item }) => {
   const { name, price, imageUrl } = item;
   const dispatch = useDispatch();
-  const addItemHanlder = (item) => dispatch(addItem(item));
+  const addItemHandler = (item) => dispatch(addItem(item));
 
   return (
     <CollectionItemContainer>
@@ -24,7 +24,7 @@ const CollectionItem = ({ item }) => {
         <NameContainer>{name}</NameContainer>
         <PriceContainer>{price}</PriceContainer>
       </CollectionFooterContainer>
-      <AddButton onClick={() => addItemHanlder(item)} inverted>
+      <AddButton onClick={() => addItemHandler(item)} inverted>
         Add to cart
       </AddButton>
     </CollectionItemContainer>
